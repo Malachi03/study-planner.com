@@ -1,67 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title> Study Planner!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Study Planner</title>
         <link rel="stylesheet" href="study-planner.css">
     </head>
     <body>
         <div id="contents">
-
-
-           
-            <!-------------------------------------------------------------- PURPLE SECTION ----------------------------------------------------------->
-         
+            <!-- Purple Section (Timer) -->
             <div id="study-container">
                 <div id="timer">
                     <h1 id="timer-heading">Study Timer</h1>
-
                     <span id="timer-display">00:00:00</span>
-
                     <div id="button-container">
                         <button id="start-button" aria-label="Start the timer">Start</button>
                         <button id="pause-button" aria-label="Pause the timer">Pause</button>
                         <button id="reset-button" aria-label="Reset the timer">Reset</button>
-                        <button id="forward-button">></button> <!-- New forward button added -->
-
+                        <button id="forward-button">></button>
                     </div>
                 </div>
 
-                <!-------------------------------------------------------------- YELLOW SECTION ----------------------------------------------------------->
-
+                <!-- Yellow Section (Session Tasks) -->
                 <div id="tasks">
-
                     <h2>Session Tasks</h2>
-
                     <ol id="tasks-display"></ol>
-
                     <button id="add-task-button">Add Task</button>
-
                     <div id="task-inputs" style="display: none;">
                         <input type="text" id="input-tasks" placeholder="Enter a new task!" aria-label="Set new task">
-                    
                         <input type="number" id="input-study-time" placeholder="Enter time" aria-label="Set study timer">
-                        
                         <button id="submit-task">Ok</button>
                     </div>
-
                 </div>
             </div>
 
-            <!------------------------------------------------------------- RED SECTION ----------------------------------------------------------------->
-
+            <!-- Red Section (Completed Tasks) -->
             <div id="tasks-done">
                 <h2>Completed Tasks</h2>
-
-                <ol id="tasks-list">
-                </ol>
-
+                <ol id="tasks-list"></ol>
                 <p id="empty-message">No tasks Completed</p>
             </div>
 
-         <!---------------------------------------------------------------- Green Section ------------------------------------------------------------------------>
-
-
-
+            <!-- Green Section -->
+            <div id="time-input-section">
+                <h2>Set Your Study Time</h2>
+                <input type="number" id="study-time" placeholder="Enter study time in minutes" aria-label="Set study time">
+            </div>
         </div>
 
         <script src="study-planner.js"></script>
