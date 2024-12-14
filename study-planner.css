@@ -6,6 +6,12 @@ body {
     background-attachment: fixed;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(64, 87, 24);
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 #contents {
@@ -191,7 +197,7 @@ body {
 
 
 
-
+z
 #submit-task {
     background-color: #00b894;
     color: white;
