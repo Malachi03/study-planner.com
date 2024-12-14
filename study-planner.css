@@ -15,63 +15,70 @@ body {
 }
 
 #contents {
+
     display: flex;
-    justify-content: center; /* Center the content */
+    justify-content: flex-start;
     align-items: flex-start;
     height: 100vh;
-    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
     padding: 20px;
 }
 
-/* Study Container (flexbox to stack timer and tasks) */
 #study-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    margin-right: 20px;
+    margin-left: 250px;
     flex-grow: 1;
-    width: 100%; /* Make it responsive */
-    max-width: 450px;
-
 }
 
-/* Timer Section */
+/* TIMER */
 #timer {
-    background-color: rgba(56, 80, 216, 0.2);
-    backdrop-filter: blur(30px);
+    background-color: rgba(56, 80, 216, 0.2); /* Lighter transparent blue background */
+    backdrop-filter: blur(30px); /* More blur for a frosted glass effect */
     color: white;
+
+    /* Adjust box-shadow for depth */
     box-shadow: 8px 16px 24px rgba(0, 0, 0, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    width: 100%;
-    max-width: 450px;
+    border-radius: 10px; /* Rounded corners for a smooth 3D look */
+
+    width: 450px;
     padding-bottom: 18px;
+
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 1000px;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
 }
 
+
+/* Timer Title */
 #timer h1 {
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Dark shadow effect */
 }
 
+/* Timer Display */
 #timer-display {
     font-size: 3em;
     padding: 10px;
     border-radius: 5px;
     margin: 10px 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Dark shadow effect */
+
 }
 
+/* Button Container */
 #button-container {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 10px; /* Space between timer display and buttons */
 }
 
+/* Timer Buttons */
 #timer button {
     background-color: red;
     color: black;
@@ -81,8 +88,9 @@ body {
     font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 5px;
+    margin: 5px; /* Space out the buttons */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+
 }
 
 #timer button:hover {
@@ -90,18 +98,56 @@ body {
     color: red;
 }
 
-/* Tasks Section */
+/* TASKS DONE */
+#tasks-done {
+    background-color: black;
+    color: red;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10xp rgba(0, 0, 0.8);
+
+}
+
+#tasks-done h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#tasks-list {
+    padding-left: 20px;
+    list-style-type: decimal;
+    box-shadow: 0 4px 10xp rgba(0, 0, 0.8);
+
+}
+
+#tasks-lists li {
+    margin-bottom: 10px;
+    background-color: lightcoral;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#tasks-done p {
+    text-align: center;
+    font-style: italic;
+    color: purple;
+}
+
+/* Tasks */
 #tasks {
     background-color: black;
     color: white;
     padding: 20px;
     border-radius: 10px;
-    width: 100%;
+    width: 80%;
     max-width: 400px;
     margin-top: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    margin-left: 1000px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Dark shadow effect */
+
 }
 
 #tasks h2 {
@@ -138,14 +184,34 @@ body {
     width: 100%;
 }
 
-#tasks #input-tasks {
+#tasks #input-tasks{
+    width: 100%;
     margin-right: 2px;
 }
+
+
 
 #tasks #input-study-time {
     width: 90px;
 }
 
+
+
+
+#submit-task {
+    background-color: #00b894;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100px;
+
+    padding-left: 4px;
+    margin-left: 5px;
+}
 #submit-task {
     background-color: #00b894;
     color: white;
@@ -162,104 +228,11 @@ body {
     width: 100%;
     padding: 8px;
     border-radius: 7.5px;
-    color: white;
+    color:  white;
     background-color: rgb(255, 255, 255, 0.3);
 }
 
 #add-task-button:hover {
     background-color: rgb(255, 255, 255, 0.4);
     cursor: pointer;
-}
-
-/* Tasks Done Section */
-#tasks-done {
-    background-color: black;
-    color: red;
-    padding: 15px;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-top: 20px;
-    width: 100%;
-    max-width: 300px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-}
-
-#tasks-done h2 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#tasks-list {
-    padding-left: 20px;
-    list-style-type: decimal;
-}
-
-#tasks-list li {
-    margin-bottom: 10px;
-    background-color: lightcoral;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-#tasks-done p {
-    text-align: center;
-    font-style: italic;
-    color: purple;
-}
-
-/* Green Section */
-#time-input-section {
-    background-color: #00b894;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 20px;
-    width: 100%;
-    max-width: 400px;
-}
-
-#study-time {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    #study-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        flex-grow: 0;
-        width: 90%; /* Adjust width for a better layout */
-    }
-    
-
-    #timer {
-        width: 100%;
-        max-width: 450px; /* Keep max-width to maintain size */
-        margin: 0 auto; /* Center the timer */
-    }
-    
-
-    #tasks {
-        width: 100%;
-        max-width: 400px; /* Adjust max-width */
-        margin: 0 auto; /* Center tasks section */
-    }
-    
-
-    #tasks-done {
-        width: 100%;
-        max-width: 100%;
-        margin-top: 20px;
-    }
-
-    #time-input-section {
-        width: 100%;
-        max-width: 100%;
-    }
 }
